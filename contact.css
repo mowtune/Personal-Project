@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+body{
+    width: 100%;
+}
+.innercontainer{
+    background-image: url(./images/background\ contact.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+}
+
+.logo{
+margin-top: 25px;
+}
+
+.navlist{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    list-style-type: none;
+    margin: 10px;
+}
+
+.navlist li a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    font-family: 'DM Sans', sans-serif;
+    height: 100%;
+    display: inline;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.navlist li a:hover{
+        background-color: #FFFFFF;
+        color: #034D82;
+        transform: scale(1,2);
+        transition: 0.7s;
+        padding: 10px;
+    }
+
+.navlist li button{
+    font-size: 14px;
+    font-weight: 400;
+    background-image: linear-gradient(to right #005490, #328BCB)!important;
+    width: 100%;
+    margin-top: -6px;
+    font-family: 'DM Sans' sans-serif;
+    display: inline;
+    padding: 10px 25px 10px 25px;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    background-color: #0262a7;
+    cursor: pointer;
+}
+
+.navlist button:hover{
+    background-color: #FFFFFF;
+    color: #0262a7;
+    transform: scale(1.2,1);
+    transition: 0.4s;
+}
+
+.box{
+    background: #FFFFFF;
+    box-shadow:2px 10px 20px rgba(75, 0, 120, 0.12);
+    width: 60%;
+    margin:auto;
+    margin-top: 10rem;
+}
+
+.heading hr{
+    width: 135px;
+    color: #4a99D3;
+    margin: auto;
+}
+
+.heading{
+    color: #4a99D3;
+    margin:auto;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.flexside{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 5%;
+}
+
+.formside{
+   width: 50%
+}
+
+.locationside{
+    width: 50%;
+}
+
+.allforms{
+    width: 90%;
+}
+
+.allforms input{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.allforms fieldset input{
+    border-style: none;
+    outline: none;
+    margin: 0%;
+}
+
+.allforms fieldset{
+    margin-bottom: 20px;
+}
