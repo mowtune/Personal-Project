@@ -11,12 +11,13 @@ div {
 
 body{
     width: 100%;
+    overflow-x: hidden;
 }
 
 .innercontainer{
     background-image: url(./images/background\ 2.svg);
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-size: cover;
     height: 80vh;
 }
@@ -53,12 +54,12 @@ margin-top: 25px;
 }
 
 .navlist li a:hover{
-        background-color: #FFFFFF;
-        color: #034D82;
-        transform: scale(1,2);
-        transition: 0.7s;
-        padding: 10px;
-    }
+    background-color: #FFFFFF;
+    color: #034D82;
+    transform: scale(1,2);
+    transition: 0.7s;
+    padding: 10px;
+}
 
 .navlist li button{
     font-size: 14px;
@@ -83,14 +84,45 @@ margin-top: 25px;
     transition: 0.4s;
 }
 
+.hamburger-icon{
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1{
+    transform:translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2{
+    opacity: 0;
+}
+
+.change .bar3{
+    transform:translate(0, -11px) rotate(45deg);
+}
+
+.mobile-menu{
+    display: none;
+}
+
 .bigtext{
-font-family: DM Sans;
-font-style: Bold;
-font-size: 30px;
-line-height: 65px;
-text-align: left;
-color: #FFFFFF;
-margin-right: -60%;
+    font-family: DM Sans;
+    font-style: Bold;
+    font-size: 30px;
+    line-height: 65px;
+    text-align: left;
+    color: #FFFFFF;
+    /* margin-right: -60%; */
+    margin-top: 50px;
 }
 
 .hero{
@@ -98,40 +130,38 @@ margin-right: -60%;
     margin-left: 80%;
     margin:auto;
     margin-top: 50px;
-    margin-bottom: -150px;
+    margin-bottom: -170px;
     width: 80%;
 }
 .design{
-    margin-top: 50px;
-    margin-right: -60%;
-    margin-left: 20%;
-    width: 85%;
-    margin-bottom: -100px;
+    /* margin-right: -35px; */
+    /* width: 70%; */
 }
 
 .design>img{
-width: 70%;
-margin-right: -20%;
+    margin-left: 385px;
+    width: 80%;
 }
 
 .text{
     margin-top: 25px;
 }
+
 .curve{
     margin-top: -20px;
 }
 
 .curve>img{
-    width: 30%;
+    width: 35%;
 }
 
 .smalltext{
     color: #FFFFFF;
-    font-size: 15px;
+    font-size: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
-    line-height: 23px;
-    width: 80%;
+    line-height: 26px;
+    width: 459px;
 }
 
 .button button{
@@ -162,12 +192,11 @@ margin-right: -20%;
 }
 
 .sponsors{
-    width: 65%;
+    width: 80%;
     justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
     display: flex;
     margin-bottom: 50px;
+    margin: auto;
 }
 
 .phonetext{
@@ -206,6 +235,7 @@ margin-right: -20%;
     line-height: 32px;
     font-family: 'DM Sans', sans-serif;
     padding-bottom: 25px;
+    width: 450px;
 }
 
 .measure h5{
@@ -282,35 +312,49 @@ margin-right: -20%;
     margin-bottom: 25px;
     line-height: 32px;
     font-size: 20px;
-    font-weight: bold;
     margin:auto;
     width: 35%;
 }
 
 .boxes{
     display: flex;
+    justify-content: space-evenly;
     padding-top: 50px;
+    cursor: pointer;
+    /* margin: auto; */
 }
 
 .growth{
     background-color: #FFFFFF;
-    margin-right: 10px;
-    margin-left: 80px;
     margin-bottom: 50px;
     padding-bottom: 80px;
+    border-radius: 8px;
+    /* margin-left: 150px; */
 }
 
-.growth img{
+.growth:hover{
+    background-color: #034D82;
+}
+
+.growth:hover p{
+    color: white;
+}
+
+.growth:hover h4{
+    color: white;
+}
+
+.growth>img{
     margin-top: 20px;
     margin-left: 40px;
 }
 
 .growth h4{
-padding-top: 20px;
-margin-left: 40px;
-margin-right: 40px;
-color: #034D82;
-font-size: 20px;
+    padding-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #034D82;
+    font-size: 20px;
 }
 
 .growth p{
@@ -318,17 +362,17 @@ font-size: 20px;
     margin-left: 40px;
     margin-right: 40px;
     color: #90A3B4;
-}
-.influencers{
-    background-color: #FFFFFF;
-    padding-left: 20px 30px;
-    margin-right: 10px;
-    margin-left: 20px;
-    margin-bottom: 50px;
-    padding-bottom: 40px;
+    width: 160px;
 }
 
-.influencers img{
+.influencers{
+    background-color: #FFFFFF;
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-radius: 8px;
+}
+
+.influencers>img{
     margin-top: 20px;
     margin-left: 40px;
 }
@@ -342,73 +386,110 @@ font-size: 20px;
 }
     
 .influencers p{
-        padding-top: 20px;
-        margin-left: 40px;
-        margin-right: 40px;
-        color: #90A3B4;
-    }
+    padding-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #90A3B4;
+    width: 164px;
+}
+
+.influencers:hover{
+    background-color: #034D82;
+}
+
+.influencers:hover p{
+    color: white;
+}
+
+.influencers:hover h4{
+    color: white;
+}
 
 .most{
     background-color: #FFFFFF;
-    margin-right: 10px;
-    margin-left: 20px;
     margin-bottom: 50px;
     padding-bottom: 40px;
+    border-radius: 8px;
 }
 
-.most img{
+.most>img{
     margin-top: 20px;
     margin-left: 40px;
 }
+
 .most h4{
     padding-top: 20px;
     margin-left: 40px;
     margin-right: 40px;
     color: #034D82;
     font-size: 20px;
-    }
+}
     
 .most p{
     padding-top: 20px;
     margin-left: 40px;
     margin-right: 40px;
     color: #90A3B4;
+    width: 155px;
+}
+
+.most:hover{
+    background-color: #034D82;
+}
+
+.most:hover p{
+    color: white;
+}
+
+.most:hover h4{
+    color: white;
 }
 
 .location{
     background-color: #FFFFFF;
-    padding-left: 20px 30px;
-    margin-right: 80px;
-    margin-left: 20px;
     margin-bottom: 50px;
     padding-bottom: 40px;
+    border-radius: 8px;
 }
 
-.location img{
+.location>img{
     margin-top: 20px;
     margin-left: 40px;
 }
+
 .location h4{
     padding-top: 20px;
     margin-left: 40px;
     margin-right: 40px;
     color: #034D82;
     font-size: 20px;
-    }
+}
     
 .location p{
     padding-top: 20px;
     margin-left: 40px;
     margin-right: 40px;
     color: #90A3B4;
+    width: 160px;
 }
 
+.location:hover{
+    background-color: #034D82;
+}
+
+.location:hover p{
+    color: white;
+}
+
+.location:hover h4{
+    color: white;
+}
 
 .powering{
     display: flex;
     justify-content: space-between;
-    margin-left: 150px;
-    margin-right: 20px;
+    margin-left: 200px;
+    /* margin-right: -80px; */
 }
 
 .heading{
@@ -418,7 +499,7 @@ font-size: 20px;
 .heading h1{
     color: #034D82;
     font-size: 40px;
-    width: 90%
+    width: 70%
 }
 
 .heading p{
@@ -429,21 +510,18 @@ font-size: 20px;
 
 .star{
     margin-bottom: 20px;
-    margin-right: -10px;
-    padding-right: 30px;
-    margin-left: 150px;
     width: 80%;
 }
+
 .star p{
     color: #90A3B4;
     margin-bottom: 20px;
     margin-top: 10px;
     font-size: 16px;
     line-height: 32px;
-    margin: auto;
-    text-align:justify;
     padding-bottom: -20px;
-    padding-right: 20px;
+    width: 410px;
+    margin-left: 45px;
 }
 
 .executive{
@@ -465,8 +543,14 @@ font-size: 20px;
     font-size: 30px;
 }
 
+.jaquon p{
+    margin-left: -1px;
+}
+
+
 .arrowcycle{
     padding-top: 20px;
+    margin-left: -100px;
 }
 
 .bluecycle{
@@ -496,12 +580,12 @@ font-size: 20px;
 }
 
 .growbrand h1{
-    font-size: 40px;
-    
+    font-size: 36px;
+    width: 350px;   
 }
 
 .emoji{
-    margin-top: -45px;
+    margin-top: -40px;
     margin-left: 110px;
 }
 
@@ -511,8 +595,8 @@ font-size: 20px;
 }
 
 .trial{
-    padding-top: 200px;
-    padding-right: 200px;
+    padding-top: 180px;
+    padding-right: 250px;
 }
 
 .trial button{
@@ -523,7 +607,6 @@ font-size: 20px;
     font-size: 17px;
     border: none;
     cursor: pointer;
-
 }
 
 .trial button:hover{
@@ -535,7 +618,6 @@ font-size: 20px;
     background-image: url(./images/footer\ backg.svg);
     margin-top: 90px;
     width:auto;
-
 }
 
 
@@ -574,3 +656,1087 @@ font-size: 20px;
 .copyright>img{
     padding-bottom:20px;
 }
+
+@media screen and (max-width: 1440px) {
+.innercontainer{
+    height: 110vh;
+}
+
+.navlist{
+    margin-top: 50px;
+}
+
+.navlist li a{
+    font-size: 20px;
+}
+
+.navlist li button{
+    font-size: 20px;
+}
+
+.logo{
+    margin-top: 60px;
+}
+
+.design>img{
+    margin-left: 156px;
+    width: 600px;
+}
+
+.bigtext{
+    font-size: 30px;
+    line-height: 65px;
+    margin-top: -5px;
+    width: 540px;
+}
+
+.curve>img{
+    width: 160px;
+}
+
+.heading h1{
+    color: #034D82;
+    font-size: 40px;
+    width: 90%
+}
+
+.growbrand{
+    margin-top: -30px;
+}
+
+.trackany p{
+    width: 571px;
+}
+
+.bluecycle{
+    margin-left: 100px;
+}
+
+}
+
+@media screen and (max-width: 1024px){
+.innercontainer{
+    height: 95vh;
+}
+
+.design>img{
+    margin-left: -91px;
+    width: 170%;
+}
+
+.design{
+    margin-right: 1px;
+}
+
+.bigtext{
+    font-size: 20px;
+    line-height: 45px;
+    margin-top: -5px;
+}
+
+.curve>img{
+    width: 110px;
+}
+
+.sponsors{
+    margin-top: 40px;
+}
+
+.phone>img{
+    width: 400px;
+    margin-left: -60px;
+}
+
+.text2 h2{
+    width: 355px;
+}
+
+.text2 p{
+    width: 450px;
+}
+
+.phonetext{
+    margin-left: -40px;
+}
+
+.scheduleimage>img{
+    width: 450px;
+    margin-top: 120px;
+    margin-left: 180px;
+}
+
+.scheduletext h1{
+    width: 353px;
+}
+
+.scheduletext p{
+    width: 400px;
+}
+
+.trackany p{
+    width: 571px;
+}
+
+.powering{
+    padding-top: 100px;
+    /* width: 80%; */
+}
+
+.heading h1{
+    margin-left: -120px;
+    width: 450px;
+}
+
+.heading p{
+    margin-left: -120px;
+    width: 439px;
+}
+
+.star{
+    margin-left: 29px;
+}
+
+.star p{
+    width: 300px;
+}
+
+.growbrand h1{
+    font-size: 35px; 
+    margin-top: -40px;
+    line-height: 38px;
+}
+
+.emoji{
+    margin-top: -40px;
+    margin-left: 100px;
+}
+
+.growbrand p{
+    margin-top: -15px;
+}
+
+.brand .others{
+    margin-top: -55px;
+}
+
+.trial{
+    padding-top: 70px;
+    padding-right: 130px;
+}
+
+.trial button{
+    height: 50px;
+    width: 150px;
+}
+
+/* .others{
+    color: #00a8DB;
+    margin-top: -120px;
+} */
+
+.p{
+    margin-top: -180px;
+}
+
+.eyha{
+    padding-top: 60px;
+    padding-left: 80px;
+}
+
+.eyha p{
+    width: 80%;
+    margin-top: 15px;
+}
+
+.copyright>img{
+    padding-bottom:20px;
+}
+
+}
+
+@media screen and (max-width: 768px){
+.innercontainer{
+    height: 75vh;
+}
+
+.navlist li a{
+    font-size: 13px;
+}
+
+.navlist li button{
+    font-size: 13px;
+    width: 80px;
+}
+
+.hero{
+    margin-bottom: -40px;
+    margin-top: -3px;
+}
+
+.design>img{
+    margin-left: -219px;
+    width: 370px;
+}
+    
+.curve>img{
+    width: 20%;
+}
+    
+.smalltext{
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 20px;
+}
+    
+.button button{
+    width: 110px;
+    height: 40px;   
+}
+    
+.demo{
+    margin-left: 20px;
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.sponsors>img{
+    width: 15%;
+    margin-top: -60px;
+    margin-bottom: 40px;
+}
+
+.phonetext{
+    padding: 50px 60px;
+    margin-bottom: -10px;
+    margin: auto;
+}
+
+.text2{
+    width: 30%;
+    padding: 5px 5px;
+    padding-right: 1px;
+}
+
+.phone{
+    margin-left: 20px;
+    background-size: 220px;;
+}
+
+.phone>img{
+    width: 60%;
+    margin-left: -30px;
+}
+
+.measure h2{
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: 40px;
+    margin-left: -150px;
+}
+
+.measure p{
+    font-size: 13px;
+    line-height: 25px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    width: 365px;
+    margin-left: -150px;
+}
+
+.measure h5{
+    font-size: 13px;
+    line-height: 15px;
+    margin-left: -150px;
+}
+
+.schedulelist li{
+    line-height: 15px;
+    font-size: 13px;
+}
+
+.schedule h1{
+    margin-bottom: 10px;
+    font-size: 20px;
+    width: 180px;
+    line-height: 30px;
+}
+
+.schedule p{
+    margin-bottom: 10px;
+    line-height: 25px;
+    font-size: 14px;
+    width: 349px;
+}
+
+.schedule h4{
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.scheduletext{
+    margin-top: 15px;
+}
+
+.scheduleimage>img{
+    width: 80%;
+    padding-right: 40px;
+    margin-left: 160px;
+    margin-top: 80px;
+}
+
+.schedule{
+    margin-bottom: -40px;
+}
+
+.track{
+    height: 100vh;
+}
+
+.trackany h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+    padding-top: 50px;
+    letter-spacing: 3px;
+}
+
+.trackany p{
+    line-height: 30px;
+    font-size: 18px;
+    width: 70%;
+}
+
+.boxes{
+    padding-top: 40px;
+}
+
+.growth{
+    margin-left: 80px;
+    height: 220px;
+}
+
+.growth>img{
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 40px;
+}
+
+.growth h4{
+    padding-top: 10px;
+    margin-left: 15px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    width: 100%;
+}
+
+.growth p{
+    padding-top: 15px;
+    margin-left: 15px;
+    width:159px;
+}
+
+.influencers{
+    margin-left: 80px;
+    height: 220px;
+}
+
+.influencers>img{
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 40px;
+}
+
+.influencers h4{
+    padding-top: 10px;
+    margin-left: 15px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    width: 60%;
+}
+    
+.influencers p{
+    padding-top: 15px;
+    margin-left: 15px;
+    width:165px;
+}
+
+.most{
+    margin-right: 10px;
+    margin-left: -630px;
+    margin-top: 260px;
+}
+
+.most>img{
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 40px;
+}
+
+.most h4{
+    padding-top: 10px;
+    margin-left: 15px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    width: 100%;
+}
+    
+.most p{
+    padding-top: 15px;
+    margin-left: 15px;
+    width: 160px;
+}
+
+.location{
+    margin-left: 65px;
+    margin-top: 260px; 
+    height: 220px;   
+}
+
+.location>img{
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 40px;
+}
+.location h4{
+    padding-top: 10px;
+    margin-left: 15px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    width: 100%;
+}
+    
+.location p{
+    padding-top: 15px;
+    margin-left: 15px;
+    width:159px;
+}
+
+.powering{
+    margin-top: 100px;
+}
+
+.heading h1{
+    font-size: 25px;
+    width: 269px;
+}
+
+.heading p{
+    font-size: 12px;
+    padding-top: 20px;
+    width: 264px;
+}
+
+.star{
+    margin-bottom: 30px;
+    margin-left: -114px;
+    margin-top: -10px;
+}
+
+.star p{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 22px;
+    width: 80%;
+    margin-left: 20px;
+}
+
+.arrow>img{
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.executive{
+    margin-top: -50px;
+}
+
+.executive>img{
+    width: 15%;
+}
+
+.jaquon{
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.jaquon h1{
+    font-size: 20px;
+    width: 110px;
+}
+
+.jaquon p{
+    font-size: 12px;
+    width: 214px;
+    margin-top: 3px;
+    margin-left: 1px;
+}
+
+.arrowcycle{
+    margin-left: -40px;
+}
+
+.arrowcycle>img{
+    width: 100px;
+}
+
+.bluecycle{
+    margin-top: -10px;
+    margin-left: 20px;
+}
+
+.brand{
+    margin-top: 80px;
+    background-size: 100%;
+    margin-left: 60px;
+    /* margin-bottom: 70px; */
+}
+
+.growbrand{
+    line-height: 30px;
+    padding-left: 30px;
+    padding-top: 70px;
+}
+
+.growbrand h1{
+    font-size: 20px;
+    width: 50%;
+    margin-top: -15px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.growbrand p{
+    /* width: 110%; */
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+
+.emoji{
+    margin-top: -48px;
+    margin-left: 60px;
+}
+
+.emoji>img{
+    width: 25px;
+}
+
+.growbrand>img{
+    width: 130px;
+}
+
+.brand .others{
+    margin-top: -35px;
+    margin-left: 140px;
+}
+
+.trial{
+    padding-top: 80px;
+    padding-right: 60px;
+}
+
+.trial button{
+    height: 40px;
+    width: 120px;
+    font-size: 12px;
+}
+
+.p{
+    line-height: 30px;
+    /* margin: auto; */
+    padding-left: 250px;
+    margin-top: -145px;
+    /* width: 100%; */
+    font-size: 15px;
+}
+
+.eyha{
+    padding-top: 50px;
+    padding-left: 50px;
+    width: 30%;
+}
+
+.eyha>img{
+    width: 60px;
+}
+
+.eyha p{
+    line-height: 25px;
+    width: 115%;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.google>img{
+    width: 35px;
+}
+
+.product h4{
+    margin-bottom: 12px;
+}
+
+.services h4{
+    margin-bottom: 12px;
+}
+
+.Company h4{
+    margin-bottom: 12px;
+}
+
+.More h4{
+    margin-bottom: 12px;
+}
+
+.copyright{
+    padding-top: 70px;
+    padding-bottom: 60px;
+    font-size: 15px;
+}
+
+.copyright>img{
+    padding-bottom:20px;
+    width: 40px;
+}
+
+}
+
+@media screen and (max-width: 425px){
+nav{
+    display: none;
+}
+
+.innercontainer{
+    height: 140vh;
+}
+
+.hamburger-icon{
+    display: block;
+}
+
+.bigtext{
+    font-size: 20px;
+    line-height: 45px;
+    margin-top: -10px;
+    width: 360px;
+}
+
+.hero{
+    flex-direction: column;
+}
+
+.design{
+    margin-left: -275px;
+    margin-top: -20px;
+}
+
+.design>img{
+    margin-left: 165px;
+    width: 80%;
+}
+
+.text{
+    margin-top: 25px;
+}
+
+.curve>img{
+    width: 32%;
+}
+
+.smalltext{
+    font-size: 20px;
+    line-height: 26px;
+    width: 360px;
+}
+
+.sponsors{
+    width: 80%;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 50px;
+    margin: auto;
+}
+
+.phonetext{
+    margin-bottom: -20px;
+    flex-direction: column;
+}
+
+.text2{
+    width: 50%;
+    margin-left: 140px;
+}
+
+.phone{
+    margin-left: 20px;
+}
+
+.phone>img{
+    width: 200px;
+}
+
+.measure h2{
+    font-size: 30px;
+    line-height: 35px;
+    width: 295px;
+    text-align: left;
+}
+
+.measure p{
+    font-size: 20px;
+    line-height: 35px;
+    padding-bottom: 15px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.measure h5{
+    font-size: 20px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.schedulelist li{
+    line-height: 20px;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.schedule h1{
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: left;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.schedule p{
+    margin-bottom: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: left;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.schedule h4{
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.scheduletext{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.scheduleimage>img{
+    margin-left: 1px;
+    margin-top: 50px;
+}
+
+.schedule{
+    /* margin-bottom: -80px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.track{
+    height: 250vh;
+}
+
+.trackany h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.trackany p{
+    line-height: 30px;
+    font-size: 20px;
+    width: 80%;
+}
+
+.boxes{
+    flex-direction: column;
+    width: 80%;
+    margin-left: 5px;
+}
+
+.growth h4{
+    font-size: 20px;
+}
+
+.growth p{
+    font-size: 20px;
+    width:220px;
+}
+
+.growth{
+    margin-left: 80px;
+}
+
+.influencers{
+    margin-left: 80px;
+}
+
+.influencers h4{
+    font-size: 20px;
+}
+
+.influencers p{
+    font-size: 20px;
+    width:220px;
+}
+
+.most{
+    margin-left: 80px;
+    margin-top: auto;
+}
+
+.most h4{
+    font-size: 20px;
+}
+
+.most p{
+    font-size: 20px;
+    width:220px;
+}
+
+.location{
+    margin-left: 80px;
+    margin-top: auto;
+    width: 255px;
+}
+.location h4{
+    font-size: 20px;
+}
+
+.location p{
+    font-size: 20px;
+    width:220px;
+}
+
+.powering{
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.heading h1{
+    font-size: 30px;
+    width: 350px;
+    text-align: left;
+    margin-left: -150px;
+}
+
+.heading p{
+    font-size: 20px;
+    padding-top: 15px;
+    margin-bottom: 40px;
+    width: 300px;
+    margin-left: -150px;
+}
+
+.star{
+    margin-bottom: 20px;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: -160px;
+}
+
+.star p{
+    margin-bottom: 50px;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align:left;
+    width: 300px;
+    margin-left: 15px;
+}
+
+.executive{
+    margin-top: -60px;
+    margin-left: 40px;
+}
+
+.executive>img{
+    width: 60px;
+}
+
+.arrow{
+    margin-top: 25px;
+    margin-left: -70px;
+}
+
+.jaquon{
+    margin-left: 10px;
+    margin-top: 30px;
+    /* padding-top: 10px; */
+    width: 10px;
+}
+
+.jaquon h1{
+    font-size: 25px;
+    margin-left: 1px;
+    width: 137px;
+}
+
+.jaquon p{
+    margin-left: 1px;
+    margin-top: 3px;
+    font-size: 20px;
+}
+
+.arrowcycle{
+    /* padding-top: 30px; */
+    margin-left: 190px;
+    margin-top: 20px;
+}
+
+.bluecycle{
+    margin-left: 80px;
+    margin-bottom: 50px;
+}
+
+.brand{
+    margin: auto;
+    width: 80%;
+    background-size: 650px;
+}
+
+.growbrand{
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.growbrand p{
+    line-height: 20px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.growbrand h1{
+    font-size: 20px;
+    width: 155px;
+    line-height: 25px;
+}
+
+.emoji{
+    margin-left: 60px;
+}
+
+.brand .others{
+    width: 68px;
+    margin-top: -30px;
+}
+
+.trial{
+    padding-top: 60px;
+    /* margin-left: -5px; */
+}
+
+.trial button{
+    height: 30px;
+    width: 80px;
+    font-size: 10px;
+
+}
+
+.footer{
+    margin-top: 20px;
+    width:auto;
+
+}
+
+.p{
+    margin-left: -200px;
+    margin-top: 30px;
+    flex-direction: column;
+    text-align: left;
+}
+
+.eyha{
+    width: 50%;
+}
+
+.eyha>img{
+    width: 80px;
+}
+
+.eyha p{
+    line-height: 30px;
+    width: 140%;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.google>img{
+    width: 37px;
+}
+
+.product{
+    margin-bottom: 30px;
+}
+
+.product h4{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.product p{
+    font-size: 20px;
+}
+
+.services{
+    margin-bottom: 30px;
+}
+
+.services h4{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.services p{
+    font-size: 20px;
+}
+
+.Company{
+    margin-bottom: 30px;
+}
+
+.Company h4{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.Company p{
+    font-size: 20px;
+}
+
+.More{
+    margin-bottom: 30px;
+}
+
+.More h4{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.More p{
+    font-size: 20px;
+}
+
+.copyright{
+    font-size: 20px;
+}
+
+.copyright>img{
+    width: 60px;
+}
+
+}
+    
